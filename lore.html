@@ -1,41 +1,256 @@
 <!doctype html>
 <html>
   <head>
-    <meta charset="uft-8" />
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale-1" />
     <title>Kung fu Påska</title>
+    <link rel="stylesheet" href="lore.css" />
+    <link rel="stylesheet" href="page.css" />
+    <link rel="icon" type="images/x-icon" href="Images/favicon.ico" />
   </head>
 
   <body>
-    <h1>Kung fu <b>PÅSKA</b></h1>
+    <div class="titlecontainer">
+      <img src="Images/KFPLOGOmedEGG.png" id="logo" />
+    </div>
+    <br />
 
-    <h2><i>Wälkommen</i> till vårens event 2026</h2>
+    <div class="navbar">
+      <div class="navbutton" id="info">
+        <a href="info.html"
+          >Info
+          <img src="Images/po3.gif" id="nav" />
+        </a>
+      </div>
+      <div class="navbutton" id="history">
+        <a href="history.html"
+          >History
+          <img src="Images/monkey1.webp" id="nav" />
+        </a>
+      </div>
+      <div class="navbutton" id="lore">
+        <a href="lore.html" style="color: gray"
+          >Lore
+          <img src="Images/shifu1.gif" id="nav" />
+        </a>
+      </div>
+    </div>
 
+    <br />
 
-    <p style="color: gray;">
-        <a href="info.html">Info</a>
-        <a href="history.html">History</a>
-        Lore
-        <a href="https://www.youtube.com/watch?v=oD9nAHuZsJU" target="_blank"> The Funny Button</a>
-    </p>
+    <div class="wrapper">
+      <div class="countdown">
+        <div class="time-box">
+          <div id="days" class="number">00</div>
+          <div class="label">Days</div>
+        </div>
 
-    <p>
-      *Information om årets KFP och så vidare, bla bla bla* blablablablablablablablablablablbalbalbablabalblababla
-      <br /><br />
-      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-      deserunt mollit anim id est laborum.
-      <hr>
-    </p>
+        <div class="time-box">
+          <div id="hours" class="number">00</div>
+          <div class="label">Hours</div>
+        </div>
 
+        <div class="time-box">
+          <div id="minutes" class="number">00</div>
+          <div class="label">Minutes</div>
+        </div>
 
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur.
-      <br /><br />
-      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-      deserunt mollit anim id est laborum.
-      <hr>
-    </p>
+        <div class="time-box">
+          <div id="seconds" class="number">00</div>
+          <div class="label">Seconds</div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const targetDate = new Date("April 3, 2026 14:00:00").getTime();
+
+      const daysEl = document.getElementById("days");
+      const hoursEl = document.getElementById("hours");
+      const minutesEl = document.getElementById("minutes");
+      const secondsEl = document.getElementById("seconds");
+
+      const interval = setInterval(() => {
+        const now = new Date().getTime();
+        const distance = targetDate - now;
+
+        if (distance < 0) {
+          clearInterval(interval);
+          document.querySelector(".countdown").innerHTML = "<h1>EXPIRED</h1>";
+          return;
+        }
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
+        const minutes = Math.floor((distance / (1000 * 60)) % 60);
+        const seconds = Math.floor((distance / 1000) % 60);
+
+        daysEl.textContent = String(days).padStart(2, "0");
+        hoursEl.textContent = String(hours).padStart(2, "0");
+        minutesEl.textContent = String(minutes).padStart(2, "0");
+        secondsEl.textContent = String(seconds).padStart(2, "0");
+      }, 1000);
+    </script>
+
+    <div class="grid">
+      <div class="scroll horizontal">
+        <img
+          src="Images/lore.gif"
+          style="max-height: 300px; max-width: 300px"
+        />
+
+        <br />
+
+        Bidragen och kulturen kring KFP har utvecklats under åren. Om du är ny
+        så kanske du snart kommer att märka att det finns återkommande teman och
+        karaktärer som KFP deltagare älskar att referera till och göra
+        inside-skämt om. Denna sidan fungerar lite som en guide där man kan lära
+        sig om de allra viktigaste karaktärerna som är en del av denna Kung Fu
+        Påska-Loren. Detta är inte de enda figurerna som man får dyrka under
+        påsken, bara de viktigaste.
+      </div>
+    </div>
+    <br />
+
+    <div class="grid">
+      <div class="scroll vertical">
+        <img
+          src="Images/KungfuPandaCast.jpg"
+          style="max-height: 300px; max-width: 300px"
+        />
+        <br />
+
+        <b>Po och company</b> <br />
+        Eftersom KFP från början var ett firande helt centrerat kring Kung Fu
+        Panda serien så är det inte konstigt att Kung Fu Pandan själv och hans
+        många vänner har dykt upp flera gånger som viktiga figurer i
+        påsk-mytologin. Både Master Oogway och Po “Noodles" har dykt upp i
+        person vid tillfällen. Tävlingar har skett i både Lord Shen och Mr Pings
+        namn. Alla älskar denna animerade filmserie och vilken Kung Fu Panda
+        referens som helst har möjlighet att bli en instant klassiker hos många
+        påskfirare.
+        <br />
+      </div>
+    </div>
+
+    <br />
+
+    <div class="grid">
+      <div class="scroll vertical">
+        <img
+          src="Images/easter.jpg"
+          style="max-height: 300px; max-width: 300px"
+        />
+
+        <br />
+        <b>Jesus och Påskharen </b> <br />
+        Trots att det är den mest populära påsk-filmen som finns så är det inte
+        många direkta referenser till den västerländska påsktraditionen i någon
+        av Kung Fu Panda filmerna. Men detta är ju inte Kung Fu Panda-fest utan
+        Kung Fu Påska. Klassiska påskteman såsom Påskharen, Ägg eller Mirakulös
+        återfödelse kan dyka upp här och där. Ett av de mest berömda bidragen i
+        KFP historia var en musikal som berättar om hur påsken blev till, fast
+        med en kung fu tvist.
+      </div>
+    </div>
+
+    <br />
+
+    <div class="grid">
+      <div class="scroll vertical">
+        <img
+          src="Images/longsmed.webp"
+          style="max-height: 300px; max-width: 300px"
+        />
+
+        <br />
+        <b>Smeden</b> <br />
+        Smeden är en extremt älskad karaktär från en obskyr Netflix-serie. Hans
+        stora popularitet växte fram runt 2021/2022 på internetforumet
+        “www.reddit.com/r/Smeden”. Han ses ofta som en symbol för manlighet och
+        mänsklig potential. Smeden firades ofta under sin egna högtid: “Feast of
+        Smeden”, men eftersom Feast of Smeden har råkat infalla på samma datum
+        som KFP tre år i rad så har många valt att fira dessa 2 högtider
+        tillsammans och Smeden anses nu vara en essentiell del av KFP kultur.
+      </div>
+    </div>
+    <br />
+
+    <div class="grid">
+      <div class="scroll vertical">
+        <img
+          src="Images/chrisPratt.jpg"
+          style="max-height: 300px; max-width: 300px"
+        />
+
+        <br />
+        <b>Chris Pratt Super Mario </b> <br />
+        2023 så utvidgades Kung Fu Påska världen till att även inkludera den
+        animerade Super Mario Bros. filmen. Detta sågs som en acceptabel
+        ersättning för kung Fu Panda det året då det fortfarande var en ny
+        animerad film med Jack Black som en av huvudrollerna. Chris Pratts Super
+        Mario film visades med blandad mottagning och har haft begränsat
+        inflytande på KFP historia efter 2023.
+      </div>
+    </div>
+    <br />
+
+    <div class="grid">
+      <div class="scroll vertical">
+        <img
+          src="Images/thelittlepandafighter.jpg"
+          style="max-height: 300px; max-width: 300px"
+        />
+
+        <br />
+        <b>Little Panda Fighter </b> <br />
+        Little panda fighter är en annan panda. Han kommer ursprungligen från
+        filmen “Little Panda Fighter”(2008), vilket anses av många vara en
+        mycket sämre rip-off av Kung Fu Panda. Little Panda Fighter har blivit
+        ihop-växlad med Po flera gånger, vilket är hur han från början klev in i
+        KFP-mytologin. Tidigare så har Little Panda Fighter burit ett stort hat
+        mot både Po och Jack Black över deras likheter, men det verkar som att
+        deras beef har blivit sqashed på senare år.
+      </div>
+    </div>
+    <br />
+
+    <div class="grid">
+      <div class="scroll vertical">
+        <img
+          src="Images/jackblack.png"
+          style="max-height: 300px; max-width: 300px"
+        />
+
+        <br />
+        <b>Jack Black som person och Minecraft </b> <br />
+        Alla filmvisningar som sker på KFP har en sak gemensamt. Jack Black är
+        en del av filmen. Inte bara så gör Jack Black rösten till Po från Kung
+        Fu Panda och Bowser från Super Mario Filmen, men spelar som person
+        huvudrollen i live action Minecraft filmen. Nu är även
+        Minecraft(speciellt Live action Minecraft) en del av KFP-lore. Jack
+        Black har dykt upp i flera bidrag och även uttryckt kontroversiella
+        åsikter genom åren.
+      </div>
+    </div>
+    <br />
+
+    <div class="grid">
+      <div class="scroll vertical">
+        <img
+          src="Images/mysteryfighter.webp"
+          style="max-height: 300px; max-width: 300px"
+        />
+
+        <br />
+        <b>???</b> <br />
+        Framtiden är osäker. Detta är kanske de mest etablerade delarna av
+        KFP-loren just nu, men precis som i verkligheten så är kultur ett
+        ständigt utvecklande väsen. Om nya teman och karaktärer från främmande
+        världar introduceras under ett KFP firande och uppskattas så är det
+        troligt att de dyker upp på den här sidan i framtiden.
+      </div>
+    </div>
+    <br />
+  </body>
+</html>
