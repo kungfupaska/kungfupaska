@@ -100,3 +100,31 @@ h2 {
 #lore.navbutton:hover {
     background-image: url(Images/Knapp5.png);
 }
+
+
+.hisbutton {
+    width: 200px;
+    height: 70px;
+    display: inline-block;
+    margin-left: 1em;
+    margin-right: 1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    font-size: 3em;
+}
+
+#nav {
+    vertical-align: middle;
+    max-height: 100px; 
+    max-width: 100px;
+}
+
+#his1.hisbutton {
+    background-image: url(./Images/knapp3.png);
+    background-size: 100% 100%;
+}
+
+#his1.hisbutton:hover {
+    background-image: url(Images/Knapp5.png);
+}
+
