@@ -181,3 +181,59 @@ h2 {
     margin-top: 5px;
     opacity: 0.7;
 }
+
+
+
+.floatingegg{
+  position: fixed;
+  top: 90%;
+  left: 105%;
+
+  z-index: 0;            /* Behind content */
+  pointer-events: none;  /* Won't block clicks */
+
+  animation: floatMove 120s linear infinite
+}
+
+.rotate{
+    width: 100px;
+    height: 100px;
+    background: url('Images/egg3.png') no-repeat center;
+    background-size: contain;
+
+    animation: spin 10s linear infinite;
+}
+
+
+@keyframes floatMove {
+  0%   { transform: translate(0, 0); }
+  65%  { transform: translate(0, 0); }
+  75%  { transform: translate(-400px, -300px); }
+  80% { transform: translate(-400px, -550px); }
+  83% { transform: translate(-1000px, -550px); }
+  86% { transform: translate(-1000px, 80px); }
+  89% { transform: translate(-1800px, -300px); }
+  100% { transform: translate(0, 0); }
+}
+
+@keyframes spin {
+    0%   { rotate: 0deg; }
+    100% { rotate: 360deg; }
+}
+
+
+/* Real content */
+.content {
+    position: relative;
+  z-index: 2;  /* Above floating image */
+}
+
+
+
+
+
+
+
+.spacer {
+  height: 20000px;
+}
