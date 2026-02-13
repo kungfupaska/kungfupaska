@@ -150,7 +150,7 @@ h2 {
 
 
 .wrapper {
-  height: 100vh;
+  height: 10vh;
   display: flex;
   justify-content: center; /* horizontal center */
   align-items: center;     /* vertical center */
