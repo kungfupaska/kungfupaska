@@ -2,108 +2,217 @@ body {
     font-family: 'Josefin Sans', sans-serif;
 }
 
-#logo {
-    max-height: 50%;
-    max-width: 50%;
+
+@media only screen and (min-width: 320px) {
+
+    body {
+        font-size: 50%;
+    }
+
+    #logo {
+        max-height: 100%;
+        max-width: 100%;
+    }
+
+    .titlecontainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 2em;
+        text-align: center;
+    }
+
+    .container {
+        text-align: center;
+    }
+
+    .grid {
+        text-align: center;
+        margin-left: 0.5em;
+        margin-right: 0.5em;
+    }
+
+    .scroll.vertical {
+        background-image: url(./Images/mobil-scroll.png);
+        background-size: 100% 100%;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+
+    .scroll.horizontal {
+        background-image: url(./Images/mobil-scroll.png);
+        background-size: 100% 100%;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        padding-left: 2em;
+        padding-right: 2em;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .navbar {
+        align-items: center;
+        justify-content: center;
+        display: space-between;
+        margin-left: 4em;
+        margin-right: 4em;
+        text-align: center;
+    }
+
+    .navbutton {
+        width: 300px;
+        height: 100px;
+        display: inline-block;
+        margin-left: 1em;
+        margin-right: 1em;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        font-size: 3em;
+        max-width: 20%;
+        max-height: 20%;
+    }
+
+    #nav {
+        vertical-align: middle;
+        max-height: 20%;
+        max-width: 20%;
+    }
+
+    #info.navbutton {
+        background-image: url(./Images/Knapp1.png);
+        background-size: 100% 100%;
+    }
+
+    #info.navbutton:hover {
+        background-image: url(Images/Knapp5.png);
+    }
+
+    #history.navbutton {
+        background-image: url(./Images/Knapp2.png);
+        background-size: 100% 100%;
+    }
+
+    #history.navbutton:hover {
+        background-image: url(Images/Knapp5.png);
+    }
+
+    #lore.navbutton {
+        background-image: url(./Images/Knapp4.png);
+        background-size: 100% 100%;
+    }
+
+    #lore.navbutton:hover {
+        background-image: url(Images/Knapp5.png);
+    }
 }
 
-.titlecontainer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 4em;
-    text-align: center;
+@media only screen and (min-width: 900px) {
+
+    body {
+        font-size: 100%;
+    }
+
+    #logo {
+        max-height: 50%;
+        max-width: 50%;
+    }
+
+    .titlecontainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 4em;
+        text-align: center;
+    }
+
+    .container {
+        text-align: center;
+    }
+
+    .grid {
+        text-align: center;
+        margin-left: 4em;
+        margin-right: 4em;
+    }
+
+    .scroll.vertical {
+        background-image: url(./Images/scroll5.png);
+        background-size: 100% 100%;
+        padding-top: 8em;
+        padding-bottom: 8em;
+        padding-left: 12em;
+        padding-right: 12em;
+    }
+
+    .scroll.horizontal {
+        background-image: url(./Images/scroll3.png);
+        background-size: 100% 100%;
+        padding-top: 4em;
+        padding-bottom: 4em;
+        padding-left: 14em;
+        padding-right: 14em;
+        margin-left: 4em;
+        margin-right: 4em;
+    }
+
+    .navbar {
+        align-items: center;
+        justify-content: center;
+        display: space-between;
+        margin-left: 4em;
+        margin-right: 4em;
+        text-align: center;
+    }
+
+    .navbutton {
+        width: 300px;
+        height: 100px;
+        display: inline-block;
+        margin-left: 1em;
+        margin-right: 1em;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        font-size: 3em;
+        max-width: 20%;
+        max-height: 20%;
+    }
+
+    #nav {
+        vertical-align: middle;
+        max-height: 20%;
+        max-width: 20%;
+    }
+
+    #info.navbutton {
+        background-image: url(./Images/Knapp1.png);
+        background-size: 100% 100%;
+    }
+
+    #info.navbutton:hover {
+        background-image: url(Images/Knapp5.png);
+    }
+
+    #history.navbutton {
+        background-image: url(./Images/Knapp2.png);
+        background-size: 100% 100%;
+    }
+
+    #history.navbutton:hover {
+        background-image: url(Images/Knapp5.png);
+    }
+
+    #lore.navbutton {
+        background-image: url(./Images/Knapp4.png);
+        background-size: 100% 100%;
+    }
+
+    #lore.navbutton:hover {
+        background-image: url(Images/Knapp5.png);
+    }
 }
 
-.container {
-    text-align: center;
-}
-
-h2 {
-    background-color: white;
-    border: 2px solid green;
-    margin-left: 4em;
-    margin-right: 4em;
-}
-
-.grid {
-    text-align: center;
-    margin-left: 4em;
-    margin-right: 4em;
-}
-
-.scroll.vertical {
-    background-image: url(./Images/scroll5.png);
-    background-size: 100% 100%;
-    padding-top: 8em;
-    padding-bottom: 8em;
-    padding-left: 12em;
-    padding-right: 12em;
-}
-
-.scroll.horizontal {
-    background-image: url(./Images/scroll3.png);
-    background-size: 100% 100%;
-    padding-top: 4em;
-    padding-bottom: 4em;
-    padding-left: 14em;
-    padding-right: 14em;
-    margin-left: 4em;
-    margin-right: 4em;
-}
-
-.navbar {
-    align-items: center;
-    justify-content: center;
-    display: space-between;
-    margin-left: 4em;
-    margin-right: 4em;
-    text-align: center;
-}
-
-.navbutton {
-    width: 300px;
-    height: 100px;
-    display: inline-block;
-    margin-left: 1em;
-    margin-right: 1em;
-    padding-top: 1em;
-    padding-bottom: 1em;
-    font-size: 3em;
-}
-
-#nav {
-    vertical-align: middle;
-    max-height: 100px; 
-    max-width: 100px;
-}
-
-#info.navbutton {
-    background-image: url(./Images/Knapp1.png);
-    background-size: 100% 100%;
-}
-
-#info.navbutton:hover {
-    background-image: url(Images/Knapp5.png);
-}
-
-#history.navbutton {
-    background-image: url(./Images/Knapp2.png);
-    background-size: 100% 100%;
-}
-
-#history.navbutton:hover {
-    background-image: url(Images/Knapp5.png);
-}
-
-#lore.navbutton {
-    background-image: url(./Images/Knapp4.png);
-    background-size: 100% 100%;
-}
-
-#lore.navbutton:hover {
-    background-image: url(Images/Knapp5.png);
-}
 
 
 .hisbutton {
@@ -119,7 +228,7 @@ h2 {
 
 #nav {
     vertical-align: middle;
-    max-height: 100px; 
+    max-height: 100px;
     max-width: 100px;
 }
 
@@ -147,13 +256,13 @@ h2 {
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000
 }
 
-
-
 .wrapper {
-  height: 10vh;
-  display: flex;
-  justify-content: center; /* horizontal center */
-  align-items: center;     /* vertical center */
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    /* horizontal center */
+    align-items: center;
+    /* vertical center */
 }
 
 .countdown {
@@ -182,20 +291,20 @@ h2 {
     opacity: 0.7;
 }
 
+.floatingegg {
+    position: fixed;
+    top: 90%;
+    left: 105%;
 
+    z-index: 0;
+    /* Behind content */
+    pointer-events: none;
+    /* Won't block clicks */
 
-.floatingegg{
-  position: fixed;
-  top: 90%;
-  left: 105%;
-
-  z-index: 0;            /* Behind content */
-  pointer-events: none;  /* Won't block clicks */
-
-  animation: floatMove 120s linear infinite
+    animation: floatMove 120s linear infinite
 }
 
-.rotate{
+.rotate {
     width: 100px;
     height: 100px;
     background: url('Images/egg3.png') no-repeat center;
@@ -204,36 +313,57 @@ h2 {
     animation: spin 10s linear infinite;
 }
 
-
 @keyframes floatMove {
-  0%   { transform: translate(0, 0); }
-  65%  { transform: translate(0, 0); }
-  75%  { transform: translate(-400px, -300px); }
-  80% { transform: translate(-400px, -550px); }
-  83% { transform: translate(-1000px, -550px); }
-  86% { transform: translate(-1000px, 80px); }
-  89% { transform: translate(-1800px, -300px); }
-  100% { transform: translate(0, 0); }
+    0% {
+        transform: translate(0, 0);
+    }
+
+    65% {
+        transform: translate(0, 0);
+    }
+
+    75% {
+        transform: translate(-400px, -300px);
+    }
+
+    80% {
+        transform: translate(-400px, -550px);
+    }
+
+    83% {
+        transform: translate(-1000px, -550px);
+    }
+
+    86% {
+        transform: translate(-1000px, 80px);
+    }
+
+    89% {
+        transform: translate(-1800px, -300px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
 }
 
 @keyframes spin {
-    0%   { rotate: 0deg; }
-    100% { rotate: 360deg; }
-}
+    0% {
+        rotate: 0deg;
+    }
 
+    100% {
+        rotate: 360deg;
+    }
+}
 
 /* Real content */
 .content {
     position: relative;
-  z-index: 2;  /* Above floating image */
+    z-index: 2;
+    /* Above floating image */
 }
 
-
-
-
-
-
-
 .spacer {
-  height: 20000px;
+    height: 20000px;
 }
