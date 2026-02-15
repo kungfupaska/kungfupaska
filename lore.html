@@ -73,69 +73,11 @@
         figurer på dem olika sidorna.
       </div>
     </div>
-    <br />
-
-    <br />
-
-    <!-- Detta är den så kallade Count Down Timern. Den ligger i denna Wrapper class och är kopplad till Scriptet nedan -->
-    <div class="wrapper">
-      <div class="countdown">
-        <div class="time-box">
-          <div id="days" class="number">00</div>
-          <div class="label">Days</div>
-        </div>
-
-        <div class="time-box">
-          <div id="hours" class="number">00</div>
-          <div class="label">Hours</div>
-        </div>
-
-        <div class="time-box">
-          <div id="minutes" class="number">00</div>
-          <div class="label">Minutes</div>
-        </div>
-
-        <div class="time-box">
-          <div id="seconds" class="number">00</div>
-          <div class="label">Seconds</div>
-        </div>
-      </div>
-    </div>
-    <script>
-      const targetDate = new Date("April 3, 2026 14:00:00").getTime();
-
-      const daysEl = document.getElementById("days");
-      const hoursEl = document.getElementById("hours");
-      const minutesEl = document.getElementById("minutes");
-      const secondsEl = document.getElementById("seconds");
-
-      const interval = setInterval(() => {
-        const now = new Date().getTime();
-        const distance = targetDate - now;
-
-        if (distance < 0) {
-          clearInterval(interval);
-          document.querySelector(".countdown").innerHTML = "<h1>EXPIRED</h1>";
-          return;
-        }
-
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
-        const minutes = Math.floor((distance / (1000 * 60)) % 60);
-        const seconds = Math.floor((distance / 1000) % 60);
-
-        daysEl.textContent = String(days).padStart(2, "0");
-        hoursEl.textContent = String(hours).padStart(2, "0");
-        minutesEl.textContent = String(minutes).padStart(2, "0");
-        secondsEl.textContent = String(seconds).padStart(2, "0");
-      }, 1000);
-    </script>
 
     <div class="grid">
       <div class="scroll horizontal">
         <img
           src="Images/lore.gif"
-          style="max-height: 300px; max-width: 300px"
         />
 
         <br />
@@ -155,7 +97,6 @@
       <div class="scroll vertical">
         <img
           src="Images/KungfuPandaCast.jpg"
-          style="max-height: 300px; max-width: 300px"
         />
         <br />
 
@@ -178,7 +119,6 @@
       <div class="scroll vertical">
         <img
           src="Images/easter.jpg"
-          style="max-height: 300px; max-width: 300px"
         />
 
         <br />
@@ -199,7 +139,6 @@
       <div class="scroll vertical">
         <img
           src="Images/longsmed.webp"
-          style="max-height: 300px; max-width: 300px"
         />
 
         <br />
@@ -220,7 +159,6 @@
       <div class="scroll vertical">
         <img
           src="Images/chrisPratt.jpg"
-          style="max-height: 300px; max-width: 300px"
         />
 
         <br />
@@ -239,7 +177,6 @@
       <div class="scroll vertical">
         <img
           src="Images/thelittlepandafighter.jpg"
-          style="max-height: 300px; max-width: 300px"
         />
 
         <br />
@@ -259,7 +196,6 @@
       <div class="scroll vertical">
         <img
           src="Images/jackblack.png"
-          style="max-height: 300px; max-width: 300px"
         />
 
         <br />
@@ -279,7 +215,6 @@
       <div class="scroll vertical">
         <img
           src="Images/mysteryfighter.webp"
-          style="max-height: 300px; max-width: 300px"
         />
 
         <br />

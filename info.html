@@ -39,6 +39,60 @@
     </div>
   </div>
 
+  <!-- Detta är den så kallade Count Down Timern. Den ligger i denna Wrapper class och är kopplad till Scriptet nedan -->
+  <div class="wrapper">
+    <div class="countdown">
+      <div class="time-box">
+        <div id="days" class="number">00</div>
+        <div class="label">Days</div>
+      </div>
+
+      <div class="time-box">
+        <div id="hours" class="number">00</div>
+        <div class="label">Hours</div>
+      </div>
+
+      <div class="time-box">
+        <div id="minutes" class="number">00</div>
+        <div class="label">Minutes</div>
+      </div>
+
+      <div class="time-box">
+        <div id="seconds" class="number">00</div>
+        <div class="label">Seconds</div>
+      </div>
+    </div>
+  </div>
+  <script>
+    const targetDate = new Date("April 3, 2026 14:00:00").getTime();
+
+    const daysEl = document.getElementById("days");
+    const hoursEl = document.getElementById("hours");
+    const minutesEl = document.getElementById("minutes");
+    const secondsEl = document.getElementById("seconds");
+
+    const interval = setInterval(() => {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+
+      if (distance < 0) {
+        clearInterval(interval);
+        document.querySelector(".countdown").innerHTML = "<h1>EXPIRED</h1>";
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((distance / (1000 * 60)) % 60);
+      const seconds = Math.floor((distance / 1000) % 60);
+
+      daysEl.textContent = String(days).padStart(2, "0");
+      hoursEl.textContent = String(hours).padStart(2, "0");
+      minutesEl.textContent = String(minutes).padStart(2, "0");
+      secondsEl.textContent = String(seconds).padStart(2, "0");
+    }, 1000);
+  </script>
+
   <div class="grid">
     <div class="scroll horizontal">
       <img src="Images/kfp2026ärhär.gif" style="max-width: 100%;">
@@ -51,8 +105,6 @@
       </p>
     </div>
   </div>
-
-  
 
   <div class="grid">
     <div class="scroll vertical">
@@ -108,14 +160,17 @@
         <b> THE KUNG FU PÅSKA EXTRAVAGANT CHARACTER TRIBUTE CHALLENGE 2026: </b>
 
         <br> <br>
-        Om du inte har varit med på Kung Fu Påska innan så undrar du kanske vad <b>TKFPECTC2026</b> innebär. Det är en tävling där
+        Om du inte har varit med på Kung Fu Påska innan så undrar du kanske vad <b>TKFPECTC2026</b> innebär. Det är en
+        tävling där
         alla som är med på festen får ta med en “Tribute” till festen och visa upp den. Character Tributes kan bestå
         av
         vad som helst så länge som det går att visa upp för alla på festen på något sätt. Tidigare “tributes” har
-        inkluderat: Musikvideos, Interactive Game Shows, hemgjorda bakverk och teaterpjäser. Om du vill ha inspiration från tidigare vinnare så kan du
-        checka in <b>"HISTORY"</b>-sidan för att se några bidrag från 2024 och 2025.  Men om du har en helt annorlunda idé så
+        inkluderat: Musikvideos, Interactive Game Shows, hemgjorda bakverk och teaterpjäser. Om du vill ha inspiration
+        från tidigare vinnare så kan du
+        checka in <b>"HISTORY"</b>-sidan för att se några bidrag från 2024 och 2025. Men om du har en helt annorlunda
+        idé så
         tveka
-        inte, kreativitet och nyskapelse uppskattas mycket! 
+        inte, kreativitet och nyskapelse uppskattas mycket!
 
         <br> <br>
         Regler:
@@ -160,9 +215,9 @@
       har några andra frågor eller funderingar kring detta så är det bara att skriva till LEO.
 
       </p>
-            <div class="navbutton" id="funny">
+      <div class="navbutton" id="funny" style="font-size: 2em;">
         <a href="secret.html" target="_blank"> Funny button
-          <img src="Images/po2.gif" style="max-height: 100px; max-width: 100px;" />
+          <img src="Images/po2.gif" style="max-width: 100%; max-height: 100%;" />
         </a>
       </div>
     </div>
@@ -171,8 +226,11 @@
   <div class="grid">
     <div class="scroll horizontal">
       <p><b>Bonusutmaning:</b> <br>
-      Om du fortsätter att navigera runt på KungfuPaska.com så kanske det finns en chans att du stötter på ett färglatt påskägg. Detta är inte en slump utan en del av årets "Easter Egg Hunt Bonus Challenge". Om du kan hitta alla 5 gömda ägg och memorizera kodfraserna som står på dem så kanske det finns en bonus för dig när Kung Fu Påska kommer den 3dje april!!!
-    </p>
+        Om du fortsätter att navigera runt på KungfuPaska.com så kanske det finns en chans att du stötter på ett
+        färglatt påskägg. Detta är inte en slump utan en del av årets "Easter Egg Hunt Bonus Challenge". Om du kan hitta
+        alla 5 gömda ägg och memorizera kodfraserna som står på dem så kanske det finns en bonus för dig när Kung Fu
+        Påska kommer den 3dje april!!!
+      </p>
     </div>
   </div>
 </body>
