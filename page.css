@@ -2,182 +2,363 @@ body {
     font-family: 'Josefin Sans', sans-serif;
 }
 
-#logo {
-    max-height: 50%;
-    max-width: 50%;
+@media only screen and (min-width: 320px) {
+
+    body {
+        font-size: 50%;
+    }
+
+    #logo {
+        max-height: 100%;
+        max-width: 100%;
+    }
+
+    .titlecontainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 2em;
+        text-align: center;
+    }
+
+    .grid {
+        text-align: center;
+        margin-left: 0.5em;
+        margin-right: 0.5em;
+    }
+
+    .scroll.vertical {
+        background-image: url(./Images/mobil-scroll.png);
+        background-size: 100% 100%;
+        padding-top: 2em;
+        padding-bottom: 2em;
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+
+    .scroll.horizontal {
+        background-image: url(./Images/mobil-scroll.png);
+        background-size: 100% 100%;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        padding-left: 2em;
+        padding-right: 2em;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .navbar {
+        align-items: center;
+        justify-content: center;
+        display: space-between;
+        margin-left: 0em;
+        margin-right: 0em;
+        text-align: center;
+    }
+
+    .navbutton {
+        width: 70px;
+        height: 100px;
+        display: inline-block;
+        margin-left: 0.5em;
+        margin-right: 0.5em;
+        padding-top: 2em;
+        padding-bottom: 0em;
+        font-size: 2em;
+        max-width: 100px;
+        max-height: 30%;
+    }
+
+    #nav {
+        vertical-align: middle;
+        max-height: 100%;
+        max-width: 100%;
+    }
+
+    #info.navbutton {
+        background-image: url(./Images/Knapp1.png);
+        background-size: 100% 100%;
+    }
+
+    #info.navbutton:hover {
+        background-image: url(Images/Knapp5.png);
+    }
+
+    #history.navbutton {
+        background-image: url(./Images/Knapp2.png);
+        background-size: 100% 100%;
+    }
+
+    #history.navbutton:hover {
+        background-image: url(Images/Knapp5.png);
+    }
+
+    #lore.navbutton {
+        background-image: url(./Images/Knapp4.png);
+        background-size: 100% 100%;
+    }
+
+    #lore.navbutton:hover {
+        background-image: url(Images/Knapp5.png);
+    }
 }
 
-.titlecontainer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 4em;
-    text-align: center;
+@media only screen and (min-width: 900px) {
+
+    body {
+        font-size: 100%;
+    }
+
+    #logo {
+        max-height: 50%;
+        max-width: 50%;
+    }
+
+    .titlecontainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 4em;
+        text-align: center;
+    }
+
+    .grid {
+        text-align: center;
+        margin-left: 4em;
+        margin-right: 4em;
+    }
+
+    .scroll.vertical {
+        background-image: url(./Images/scroll5.png);
+        background-size: 100% 100%;
+        padding-top: 8em;
+        padding-bottom: 8em;
+        padding-left: 12em;
+        padding-right: 12em;
+    }
+
+    .scroll.horizontal {
+        background-image: url(./Images/scroll3.png);
+        background-size: 100% 100%;
+        padding-top: 4em;
+        padding-bottom: 4em;
+        padding-left: 14em;
+        padding-right: 14em;
+        margin-left: 4em;
+        margin-right: 4em;
+    }
+
+    .navbar {
+        align-items: center;
+        justify-content: center;
+        display: space-between;
+        margin-left: 4em;
+        margin-right: 4em;
+        text-align: center;
+    }
+
+    .navbutton {
+        width: 300px;
+        height: 100px;
+        display: inline-block;
+        margin-left: 1em;
+        margin-right: 1em;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        font-size: 3em;
+        max-width: 20%;
+        max-height: 20%;
+    }
+
+    #nav {
+        vertical-align: middle;
+        max-height: 100%;
+        max-width: 100%;
+    }
+
+    #info.navbutton {
+        background-image: url(./Images/Knapp1.png);
+        background-size: 100% 100%;
+    }
+
+    #info.navbutton:hover {
+        background-image: url(Images/Knapp5.png);
+    }
+
+    #history.navbutton {
+        background-image: url(./Images/Knapp2.png);
+        background-size: 100% 100%;
+    }
+
+    #history.navbutton:hover {
+        background-image: url(Images/Knapp5.png);
+    }
+
+    #lore.navbutton {
+        background-image: url(./Images/Knapp4.png);
+        background-size: 100% 100%;
+    }
+
+    #lore.navbutton:hover {
+        background-image: url(Images/Knapp5.png);
+    }
 }
 
-.container {
-    text-align: center;
+/* Style för timern mobil */
+@media only screen and (min-width: 320px) {
+    .wrapper {
+        display: flex;
+        justify-content: center;
+        /* horizontal center */
+        align-items: center;
+        /* vertical center */
+        margin-bottom: 2em;
+    }
+
+    .countdown {
+        display: flex;
+        gap: 1em;
+    }
+
+    .time-box {
+        background-image: url("Images/scroll2.png");
+        background-size: 100% 100%;
+        padding-top: 2em;
+        padding-left: 0;
+        padding-right: 0;
+        text-align: center;
+        min-width: 8em;
+        min-height: 7em;
+        color: orange;
+        max-width: 100%;
+    }
+
+    .number {
+        font-size: 2em;
+        font-weight: bold;
+    }
+
+    .label {
+        font-size: 1em;
+        text-transform: uppercase;
+        margin-top: 5px;
+    }
 }
 
-h2 {
-    background-color: white;
-    border: 2px solid green;
-    margin-left: 4em;
-    margin-right: 4em;
+/* Style för timern desktop */
+@media only screen and (min-width: 900px) {
+    .wrapper {
+        display: flex;
+        justify-content: center;
+        /* horizontal center */
+        align-items: center;
+        /* vertical center */
+        margin-bottom: 0;
+    }
+
+    .countdown {
+        display: flex;
+        gap: 20px;
+    }
+
+    .time-box {
+        background-image: url("Images/scroll2.png");
+        background-size: 100% 100%;
+        padding-top: 40px;
+        padding-left: 30px;
+        padding-right: 30px;
+        text-align: center;
+        min-width: 100px;
+        color: orange;
+    }
+
+    .number {
+        font-size: 2.5rem;
+        font-weight: bold;
+    }
+
+    .label {
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        margin-top: 5px;
+        opacity: 0.7;
+    }
+
 }
 
-.grid {
-    text-align: center;
-    margin-left: 4em;
-    margin-right: 4em;
+.floatingegg {
+    position: fixed;
+    top: 90%;
+    left: 105%;
+
+    z-index: 0;
+    /* Behind content */
+    pointer-events: none;
+    /* Won't block clicks */
+
+    animation: floatMove 120s linear infinite
 }
 
-.scroll.vertical {
-    background-image: url(./Images/scroll5.png);
-    background-size: 100% 100%;
-    padding-top: 8em;
-    padding-bottom: 8em;
-    padding-left: 12em;
-    padding-right: 12em;
-}
-
-.scroll.horizontal {
-    background-image: url(./Images/scroll3.png);
-    background-size: 100% 100%;
-    padding-top: 4em;
-    padding-bottom: 4em;
-    padding-left: 14em;
-    padding-right: 14em;
-    margin-left: 4em;
-    margin-right: 4em;
-}
-
-.navbar {
-    align-items: center;
-    justify-content: center;
-    display: space-between;
-    margin-left: 4em;
-    margin-right: 4em;
-    text-align: center;
-}
-
-.navbutton {
-    width: 300px;
+.rotate {
+    width: 100px;
     height: 100px;
-    display: inline-block;
-    margin-left: 1em;
-    margin-right: 1em;
-    padding-top: 1em;
-    padding-bottom: 1em;
-    font-size: 3em;
+    background: url('Images/egg3.png') no-repeat center;
+    background-size: contain;
+
+    animation: spin 10s linear infinite;
 }
 
-#nav {
-    vertical-align: middle;
-    max-height: 100px; 
-    max-width: 100px;
+@keyframes floatMove {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    65% {
+        transform: translate(0, 0);
+    }
+
+    75% {
+        transform: translate(-400px, -300px);
+    }
+
+    80% {
+        transform: translate(-400px, -550px);
+    }
+
+    83% {
+        transform: translate(-1000px, -550px);
+    }
+
+    86% {
+        transform: translate(-1000px, 80px);
+    }
+
+    89% {
+        transform: translate(-1800px, -300px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
 }
 
-#info.navbutton {
-    background-image: url(./Images/Knapp1.png);
-    background-size: 100% 100%;
+@keyframes spin {
+    0% {
+        rotate: 0deg;
+    }
+
+    100% {
+        rotate: 360deg;
+    }
 }
 
-#info.navbutton:hover {
-    background-image: url(Images/Knapp5.png);
+/* Real content */
+.content {
+    position: relative;
+    z-index: 2;
+    /* Above floating image */
 }
 
-#history.navbutton {
-    background-image: url(./Images/Knapp2.png);
-    background-size: 100% 100%;
-}
-
-#history.navbutton:hover {
-    background-image: url(Images/Knapp5.png);
-}
-
-#lore.navbutton {
-    background-image: url(./Images/Knapp4.png);
-    background-size: 100% 100%;
-}
-
-#lore.navbutton:hover {
-    background-image: url(Images/Knapp5.png);
-}
-
-
-.hisbutton {
-    width: 200px;
-    height: 70px;
-    display: inline-block;
-    margin-left: 1em;
-    margin-right: 1em;
-    padding-top: 1em;
-    padding-bottom: 1em;
-    font-size: 3em;
-}
-
-#nav {
-    vertical-align: middle;
-    max-height: 100px; 
-    max-width: 100px;
-}
-
-#his1.hisbutton {
-    background-image: url(./Images/knapp3.png);
-    background-size: 100% 100%;
-}
-
-#his1.hisbutton:hover {
-    background-image: url(Images/Knapp5.png);
-}
-
-.timer {
-    background-image: url(./Images/timer.webp);
-    background-size: 100% 100%;
-    padding-top: 10em;
-    padding-bottom: 10em;
-    padding-left: 14em;
-    padding-right: 14em;
-    margin-left: 4em;
-    margin-right: 4em;
-    color: aquamarine;
-    font-size: larger;
-    font-weight: bolder;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000
-}
-
-
-
-.wrapper {
-  height: 100vh;
-  display: flex;
-  justify-content: center; /* horizontal center */
-  align-items: center;     /* vertical center */
-}
-
-.countdown {
-    display: flex;
-    gap: 20px;
-}
-
-.time-box {
-    background: #3ad8ff;
-    padding: 20px 30px;
-    border-radius: 12px;
-    text-align: center;
-    min-width: 100px;
-    box-shadow: 0 5px 15px rgba(245, 223, 223, 0.945);
-}
-
-.number {
-    font-size: 2.5rem;
-    font-weight: bold;
-}
-
-.label {
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    margin-top: 5px;
-    opacity: 0.7;
+.spacer {
+    height: 20000px;
 }
