@@ -2,6 +2,7 @@ body {
     font-family: "Candara", "Courier New", monospace;;
 }
 
+/*Style för mobil */
 @media only screen and (min-width: 320px) {
 
     body {
@@ -101,8 +102,32 @@ body {
     #lore.navbutton:hover {
         background-image: url(Images/Knapp5.png);
     }
+
+    #funny.navbutton {
+        background-image: url(./Images/knapp6.png);
+        background-size: 100% 100%;
+    }
+
+    #funny.navbutton:hover {
+        background-image: url(Images/Knapp5.png);
+    }
+
+
+    #subhis.navbutton {
+        background-image: url(./Images/knapp3.png);
+        background-size: 100% 100%;
+        width: 150px;
+        height: 100px;
+    }
+
+    #subhis.navbutton:hover {
+        background-image: url(Images/Knapp5.png);
+        width: 150px;
+        height: 100px;
+    }
 }
 
+/*Style för desktop */
 @media only screen and (min-width: 900px) {
 
     body {
@@ -202,6 +227,29 @@ body {
     #lore.navbutton:hover {
         background-image: url(Images/Knapp5.png);
     }
+
+    #funny.navbutton {
+        background-image: url(./Images/knapp6.png);
+        background-size: 100% 100%;
+    }
+
+    #funny.navbutton:hover {
+        background-image: url(Images/Knapp5.png);
+    }
+
+
+    #subhis.navbutton {
+        background-image: url(./Images/knapp3.png);
+        background-size: 100% 100%;
+        width: 150px;
+        height: 100px;
+    }
+
+    #subhis.navbutton:hover {
+        background-image: url(Images/Knapp5.png);
+        width: 150px;
+        height: 100px;
+    }
 }
 
 /* Style för timern mobil */
@@ -299,6 +347,82 @@ body {
     animation: floatMove 120s linear infinite
 }
 
+
+.floatingegg2 {
+    position: fixed;
+    top: 75%;
+    left: -10%;
+
+    z-index: 0;
+    /* Behind content */
+    pointer-events: none;
+    /* Won't block clicks */
+
+    animation: floatMove2 5s linear infinite
+}
+
+.floatingfun {
+    position: fixed;
+    top: -20%;
+    left: 30%;
+    width: 300px;
+    height: 300px;
+
+    z-index: 0;
+    /* Behind content */
+    pointer-events: none;
+    /* Won't block clicks */
+
+    animation: floatMove3 8s linear infinite
+}
+
+.floatingfun2 {
+    position: fixed;
+    top: -30%;
+    left: 65%;
+    width: 300px;
+    height: 300px;
+
+    z-index: 0;
+    /* Behind content */
+    pointer-events: none;
+    /* Won't block clicks */
+
+    animation: floatMove3 10s linear infinite
+}
+
+.floatingfun3 {
+    position: fixed;
+    top: 110%;
+    left: 10%;
+    width: 300px;
+    height: 300px;
+
+    z-index: 0;
+    /* Behind content */
+    pointer-events: none;
+    /* Won't block clicks */
+
+    animation: floatMove4 7s linear infinite
+}
+
+.floatingfun4 {
+    position: fixed;
+    top: 110%;
+    left: 60%;
+    width: 300px;
+    height: 300px;
+
+    z-index: 0;
+    /* Behind content */
+    pointer-events: none;
+    /* Won't block clicks */
+
+    animation: floatMove4 6s linear infinite
+}
+
+
+
 .rotate {
     width: 100px;
     height: 100px;
@@ -306,6 +430,51 @@ body {
     background-size: contain;
 
     animation: spin 10s linear infinite;
+}
+
+.rotate2 {
+    width: 100px;
+    height: 100px;
+    background: url('Images/egg4.png') no-repeat center;
+    background-size: contain;
+
+    animation: spin 3s linear infinite;
+}
+
+.rotate3 {
+    position: fixed;
+    top: 25%;
+    left: 75%;
+    width: 300px;
+    height: 300px;
+    background: url('Images/po5.gif') no-repeat center;
+    background-size: contain;
+
+    animation: spin 60s linear infinite;
+}
+
+.rotate4 {
+    position: fixed;
+    top: 65%;
+    left: 30%;
+    width: 300px;
+    height: 300px;
+    background: url('Images/po4.gif') no-repeat center;
+    background-size: contain;
+
+    animation: spin 20s linear infinite;
+}
+
+.rotate5 {
+    position: fixed;
+    top: 10%;
+    left: 20%;
+    width: 300px;
+    height: 300px;
+    background: url('Images/tailung1.gif') no-repeat center;
+    background-size: contain;
+
+    animation: spin 8s linear infinite;
 }
 
 @keyframes floatMove {
@@ -341,6 +510,53 @@ body {
         transform: translate(0, 0);
     }
 }
+
+
+@keyframes floatMove2 {
+    0% {
+        transform: translate(0, 0);
+    }
+
+
+    85% {
+        transform: translate(300px, 0px);
+    }
+
+
+    100% {
+        transform: translate(300px, -50px);
+    }
+}
+
+
+@keyframes floatMove3 {
+    0% {
+        transform: translate(0, 0);
+    }
+
+
+    100% {
+        transform: translate(10px, 500px);
+    }
+}
+
+
+@keyframes floatMove4 {
+    0% {
+        transform: translate(0, 0);
+    }
+
+
+    100% {
+        transform: translate(-15px, -500px);
+    }
+}
+
+
+
+
+
+
 
 @keyframes spin {
     0% {
