@@ -112,18 +112,14 @@ body {
         background-image: url(Images/Knapp5.png);
     }
 
-
     #subhis.navbutton {
         background-image: url(./Images/knapp3.png);
         background-size: 100% 100%;
-        width: 150px;
-        height: 100px;
+        max-height: 3em;
     }
 
     #subhis.navbutton:hover {
         background-image: url(Images/Knapp5.png);
-        width: 150px;
-        height: 100px;
     }
 }
 
